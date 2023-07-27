@@ -5,8 +5,8 @@ const { accounts, users, writeJSON } = require('./data.js');
 
 const app = express();
 
-app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({extended:true}));
